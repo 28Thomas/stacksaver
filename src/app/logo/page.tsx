@@ -66,10 +66,10 @@ export default function LogoPage() {
           <div className="mt-12 p-6 bg-green-50 rounded-lg border border-green-200">
             <h3 className="font-semibold text-green-900 mb-2">Usage Guidelines</h3>
             <ul className="text-sm text-green-800 space-y-1">
-              <li>• Maintain the logo's aspect ratio when resizing</li>
+              <li>• Maintain the logo&apos;s aspect ratio when resizing</li>
               <li>• Keep clear space around the logo (at least 1/4 of the logo width)</li>
               <li>• Use on light backgrounds for best visibility</li>
-              <li>• The logo represents StackSaver's commitment to saving money</li>
+              <li>• The logo represents StackSaver&apos;s commitment to saving money</li>
             </ul>
           </div>
         </div>
