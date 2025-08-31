@@ -40,7 +40,7 @@ export default function EarlyAccessForm() {
         setMessage(data.error);
         setMessageType('error');
       }
-    } catch (error) {
+    } catch {
       setMessage('Something went wrong. Please try again.');
       setMessageType('error');
     } finally {

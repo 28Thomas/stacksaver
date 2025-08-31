@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function SocialProofSection() {
   return (
@@ -17,9 +18,11 @@ export default function SocialProofSection() {
                   <div className="relative w-48 h-48 lg:w-56 lg:h-56">
                     <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-green-50 to-teal-100 p-2 shadow-xl">
                       <div className="w-full h-full rounded-full overflow-hidden relative">
-                        <img 
+                        <Image 
                           src="/profile-picture.jpeg" 
                           alt="Founder Profile" 
+                          width={224}
+                          height={224}
                           className="w-full h-full object-cover rounded-full"
                           style={{
                             objectPosition: 'center 20%'
