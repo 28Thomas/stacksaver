@@ -17,7 +17,7 @@ try {
   console.error('Failed to initialize Resend:', error);
 }
 
-export const sendWelcomeEmail = async (email: string, aiTool?: string) => {
+export const sendWelcomeEmail = async (email: string, _aiTool?: string) => {
   const subject = 'Thanks for joining StackSaver! 🎉';
   
   const html = `
