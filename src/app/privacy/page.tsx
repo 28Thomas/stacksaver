@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
               <h1 className="text-3xl font-bold text-gray-900 mb-8">Privacy & Cookie Policy</h1>
 
               <p className="text-gray-600 mb-6">
-                <strong>&quot;Last updated&quot;:</strong> August 31, 2025
+                <strong>&quot;Last updated&quot;:</strong> August 31, 2025 {/* Updated for deployment */}
               </p>
 
               <div className="space-y-8">
