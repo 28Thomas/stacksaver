@@ -6,6 +6,11 @@ export const trackEvent = (eventName: string, properties?: Record<string, unknow
     window.va('event', { name: eventName, properties });
   }
   
+  // Track with Google Analytics
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', eventName, properties);
+  }
+  
   // Also log to console for development
   if (process.env.NODE_ENV === 'development') {
     console.log('📊 Track Event:', eventName, properties);
