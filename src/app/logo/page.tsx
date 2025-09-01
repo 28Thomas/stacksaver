@@ -1,6 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import LogoDownload from '@/components/ui/LogoDownload';
+
+export const metadata: Metadata = {
+  title: 'Download StackSaver Logo - Brand Assets',
+  description: 'Download StackSaver logo assets in different sizes for Figma, presentations, and design tools. High-quality PNG files with transparent backgrounds.',
+  alternates: {
+    canonical: 'https://stacksaver.com/logo',
+  },
+};
 
 export default function LogoPage() {
   return (

@@ -1,6 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import Logo from '@/components/ui/Logo';
+
+export const metadata: Metadata = {
+  title: 'Privacy & Cookie Policy - StackSaver',
+  description: 'StackSaver Privacy & Cookie Policy. Learn how we collect, use, and protect your information when using our Chrome extension.',
+  alternates: {
+    canonical: 'https://stacksaver.com/privacy',
+  },
+};
 
 export default function PrivacyPolicy() {
   return (
