@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/_next/'],
     },
-    sitemap: 'https://stacksaver.com/sitemap.xml', // Replace with your actual domain
+    sitemap: 'https://stacksaver.io/sitemap.xml', // Your actual domain
   }
 }

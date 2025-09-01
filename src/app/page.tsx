@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'StackSaver - Save on AI SaaS Tools',
     description: 'A Chrome extension that shows real discounts the moment you visit AI SaaS sites.',
     type: 'website',
-    url: 'https://stacksaver.com',
+    url: 'https://stacksaver.io',
     siteName: 'StackSaver',
   },
   twitter: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: 'A Chrome extension that shows real discounts the moment you visit AI SaaS sites.',
   },
   alternates: {
-    canonical: 'https://stacksaver.com',
+    canonical: 'https://stacksaver.io',
   },
 };
 

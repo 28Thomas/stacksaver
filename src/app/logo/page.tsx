@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Download StackSaver Logo - Brand Assets',
   description: 'Download StackSaver logo assets in different sizes for Figma, presentations, and design tools. High-quality PNG files with transparent backgrounds.',
   alternates: {
-    canonical: 'https://stacksaver.com/logo',
+    canonical: 'https://stacksaver.io/logo',
   },
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Privacy & Cookie Policy - StackSaver',
   description: 'StackSaver Privacy & Cookie Policy. Learn how we collect, use, and protect your information when using our Chrome extension.',
   alternates: {
-    canonical: 'https://stacksaver.com/privacy',
+    canonical: 'https://stacksaver.io/privacy',
   },
 };
 
