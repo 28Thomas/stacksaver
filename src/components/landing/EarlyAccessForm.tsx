@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { trackFormInteraction, trackButtonClick, trackConversion } from '@/lib/tracking';
 
 export default function EarlyAccessForm() {
   const [email, setEmail] = useState('');
@@ -16,6 +17,9 @@ export default function EarlyAccessForm() {
     setIsSubmitting(true);
     setMessage('');
     setMessageType('');
+
+    // Track form submission start
+    trackFormInteraction('start', 'early_access', { hasAiTool: !!aiTool.trim() });
 
     try {
       const response = await fetch('/api/subscribe', {
@@ -36,20 +40,39 @@ export default function EarlyAccessForm() {
         setMessageType('success');
         setEmail('');
         setAiTool('');
+        
+        // Track successful conversion
+        trackFormInteraction('complete', 'early_access', { 
+          hasAiTool: !!aiTool.trim(),
+          aiTool: aiTool.trim() || 'none'
+        });
+        trackConversion('email_signup', { source: 'early_access_form' });
       } else {
         setMessage(data.error);
         setMessageType('error');
+        
+        // Track form error
+        trackFormInteraction('error', 'early_access', { 
+          error: data.error,
+          hasAiTool: !!aiTool.trim()
+        });
       }
     } catch {
       setMessage('Something went wrong. Please try again.');
       setMessageType('error');
+      
+      // Track form error
+      trackFormInteraction('error', 'early_access', { 
+        error: 'network_error',
+        hasAiTool: !!aiTool.trim()
+      });
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <section id="early-access-form" className="py-20 px-6 bg-gradient-to-b from-white to-green-50">
+    <section id="early-access-form" data-section="early_access_form" className="py-20 px-6 bg-gradient-to-b from-white to-green-50">
       <div className="max-w-2xl mx-auto">
         <div className="text-center space-y-8">
           <div className="space-y-4">
@@ -111,6 +134,7 @@ export default function EarlyAccessForm() {
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full px-8 py-4 text-lg h-auto rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => trackButtonClick('join_early_access', 'early_access_form')}
                 >
                   {isSubmitting ? 'Subscribing...' : 'Join Early Access'}
                 </Button>

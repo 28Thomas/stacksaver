@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function SocialProofSection() {
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-white to-green-50">
+    <section data-section="social_proof" className="py-20 px-6 bg-gradient-to-b from-white to-green-50">
       <div className="max-w-5xl mx-auto">
         <div className="text-center space-y-12">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">

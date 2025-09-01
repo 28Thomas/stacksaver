@@ -131,7 +131,7 @@ export default function PrivacyPolicy() {
                     If you have any questions about this Privacy & Cookie Policy, please contact us at:
                   </p>
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-4">
-                    <p className="text-green-800 font-medium">Email: privacy@stacksaver.com</p>
+                    <p className="text-green-800 font-medium">Email: thomas@stacksaver.io</p>
                     <p className="text-green-700 text-sm mt-1">We&apos;ll respond within 48 hours</p>
                   </div>
                 </section>
@@ -149,9 +149,12 @@ export default function PrivacyPolicy() {
               <span>←</span>
               <span>Back to StackSaver</span>
             </Link>
-            <div className="flex items-center gap-2">
-              <Logo size="sm" />
-              <p className="text-sm text-gray-500">© 2025 StackSaver. All rights reserved.</p>
+            <div className="flex flex-col items-end gap-1">
+              <div className="flex items-center gap-2">
+                <Logo size="sm" />
+                <p className="text-sm text-gray-500">© 2025 StackSaver. All rights reserved.</p>
+              </div>
+              <p className="text-sm text-gray-500">thomas@stacksaver.io</p>
             </div>
           </div>
         </div>

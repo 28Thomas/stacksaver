@@ -18,6 +18,7 @@ export default function Footer() {
             <p className="text-gray-600 leading-relaxed mb-6">
               The transparent Chrome extension that finds verified discounts for AI marketing tools. No tricks, no hidden fees.
             </p>
+            <p className="text-gray-600 text-sm mb-4">thomas@stacksaver.io</p>
             <div className="flex gap-4">
               <div className="bg-green-100 px-3 py-1 rounded-full">
                 <p className="text-sm font-medium text-green-700">🇳🇱 Made in Netherlands</p>

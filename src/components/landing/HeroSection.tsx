@@ -4,14 +4,16 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Chrome, CheckCircle, Shield, Zap } from 'lucide-react';
 import Logo from '@/components/ui/Logo';
+import { trackButtonClick } from '@/lib/tracking';
 
 export default function HeroSection() {
   const scrollToForm = () => {
+    trackButtonClick('join_early_access', 'hero_section');
     document.getElementById('early-access-form')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section className="py-20 lg:py-32 px-6 bg-gradient-to-b from-white to-green-50">
+    <section data-section="hero" className="py-20 lg:py-32 px-6 bg-gradient-to-b from-white to-green-50">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column */}
