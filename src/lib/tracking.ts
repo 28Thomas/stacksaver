@@ -1,19 +1,34 @@
 // Custom tracking utilities for landing page optimization
+import { getAnalyticsData } from './cookies';
 
 export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
+  // Get cookie data for enhanced tracking
+  const cookieData = typeof window !== 'undefined' ? getAnalyticsData() : null;
+  
+  // Combine properties with cookie data
+  const enhancedProperties = {
+    ...properties,
+    ...(cookieData && {
+      sessionId: cookieData.sessionId,
+      hasConsent: cookieData.cookieConsent,
+      preferredAiTool: cookieData.preferredAiTool,
+      isReturningUser: !!cookieData.firstVisit && cookieData.firstVisit < new Date(Date.now() - 24 * 60 * 60 * 1000), // 24 hours ago
+    }),
+  };
+
   // Track with Vercel Analytics
   if (typeof window !== 'undefined' && window.va) {
-    window.va('event', { name: eventName, properties });
+    window.va('event', { name: eventName, properties: enhancedProperties });
   }
   
   // Track with Google Analytics
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', eventName, properties);
+    window.gtag('event', eventName, enhancedProperties);
   }
   
   // Also log to console for development
   if (process.env.NODE_ENV === 'development') {
-    console.log('📊 Track Event:', eventName, properties);
+    console.log('📊 Track Event:', eventName, enhancedProperties);
   }
 };
 

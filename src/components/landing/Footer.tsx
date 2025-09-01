@@ -39,7 +39,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-gray-900 mb-6">Legal</h4>
             <div className="space-y-3">
               <Link href="/privacy" className="block text-gray-600 hover:text-green-600 transition-colors duration-200">Privacy & Cookie Policy</Link>
-              <a href="#terms" className="block text-gray-600 hover:text-green-600 transition-colors duration-200">Terms of Service</a>
+              <Link href="/terms" className="block text-gray-600 hover:text-green-600 transition-colors duration-200">Terms of Service</Link>
             </div>
           </div>
         </div>

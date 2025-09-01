@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { trackFormInteraction, trackButtonClick, trackConversion } from '@/lib/tracking';
+import { setPreferredAiTool, setFormStarted, setFormCompleted, getPreferredAiTool } from '../../lib/cookies';
 
 export default function EarlyAccessForm() {
   const [email, setEmail] = useState('');
@@ -11,6 +12,14 @@ export default function EarlyAccessForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState<'success' | 'error' | ''>('');
+
+  // Load saved AI tool preference from cookies
+  useEffect(() => {
+    const savedAiTool = getPreferredAiTool();
+    if (savedAiTool) {
+      setAiTool(savedAiTool);
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,6 +29,12 @@ export default function EarlyAccessForm() {
 
     // Track form submission start
     trackFormInteraction('start', 'early_access', { hasAiTool: !!aiTool.trim() });
+    
+    // Set cookies for tracking
+    setFormStarted();
+    if (aiTool.trim()) {
+      setPreferredAiTool(aiTool.trim());
+    }
 
     try {
       const response = await fetch('/api/subscribe', {
@@ -47,6 +62,9 @@ export default function EarlyAccessForm() {
           aiTool: aiTool.trim() || 'none'
         });
         trackConversion('email_signup', { source: 'early_access_form' });
+        
+        // Set completion cookie
+        setFormCompleted(email);
       } else {
         setMessage(data.error);
         setMessageType('error');

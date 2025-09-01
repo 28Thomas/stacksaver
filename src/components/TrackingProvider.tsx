@@ -2,9 +2,13 @@
 
 import { useEffect } from 'react';
 import { initScrollTracking, initSectionTracking } from '@/lib/tracking';
+import { trackFirstVisit } from '@/lib/cookies';
 
 export default function TrackingProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
+    // Track first visit
+    trackFirstVisit();
+    
     // Initialize scroll tracking
     const cleanupScroll = initScrollTracking();
     

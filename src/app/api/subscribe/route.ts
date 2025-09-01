@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { supabase } from '@/lib/supabase'
+import { sendWelcomeEmail } from '@/lib/resend'
 
 export async function POST(request: NextRequest) {
   try {
@@ -50,6 +51,16 @@ export async function POST(request: NextRequest) {
         { error: 'Failed to subscribe. Please try again.' },
         { status: 500 }
       )
+    }
+
+    // Send welcome email
+    try {
+      console.log('About to send welcome email to:', email);
+      const emailResult = await sendWelcomeEmail(email, aiTool || undefined);
+      console.log('Email send result:', emailResult);
+    } catch (emailError) {
+      console.error('Email sending error:', emailError)
+      // Don't fail the subscription if email fails
     }
 
     return NextResponse.json(
