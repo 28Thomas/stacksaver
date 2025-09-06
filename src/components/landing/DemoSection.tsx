@@ -1,108 +1,95 @@
-import React from 'react';
-import Logo from '@/components/ui/Logo';
+"use client";
+
+import React, { useState, useEffect, useRef } from 'react';
+import { Play } from 'lucide-react';
 
 export default function DemoSection() {
+  const [loomVisible, setLoomVisible] = useState(false);
+  const [loomKey, setLoomKey] = useState(0);
+  const demoSectionRef = useRef<HTMLDivElement>(null);
+
+  const handlePlayClick = () => {
+    setLoomVisible(true);
+    setLoomKey(prev => prev + 1);
+  };
+
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setLoomVisible(true);
+            setLoomKey((k) => k + 1);
+          } else {
+            setLoomVisible(false);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    if (demoSectionRef.current) {
+      observer.observe(demoSectionRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="demo" className="py-20 px-6 bg-white">
-      <div className="max-w-5xl mx-auto text-center">
-        <div className="space-y-12">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
-            See it in action (60s)
-          </h2>
-          
-          <div className="relative">
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-1 shadow-2xl">
-              <div className="bg-black rounded-xl overflow-hidden">
-                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative">
-                  {/* Browser Mockup */}
-                  <div className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-2xl overflow-hidden">
-                    {/* Browser Header */}
-                    <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b">
-                      <div className="flex gap-2">
-                        <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                        <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                        <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 bg-white rounded-md px-3 py-1 text-sm text-gray-600 ml-4">
-                        writesonic.com
-                      </div>
-                    </div>
-                    
-                    {/* Page Content */}
-                    <div className="p-8 bg-white">
-                      <div className="max-w-4xl mx-auto">
-                        {/* Writesonic Header */}
-                        <div className="flex items-center justify-between mb-8">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                              <span className="text-white font-bold text-sm">W</span>
-                            </div>
-                            <h1 className="text-2xl font-bold text-gray-900">Writesonic</h1>
-                          </div>
-                          <div className="flex items-center gap-4">
-                            <button className="px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors">Login</button>
-                            <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                              Start Free Trial
-                            </button>
-                          </div>
-                        </div>
-                        
-                        {/* Hero Section */}
-                        <div className="text-center mb-12">
-                          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                            AI-Powered Content Creation
-                          </h2>
-                          <p className="text-xl text-gray-600 mb-8">
-                            Create high-quality content in seconds with AI
-                          </p>
-                          <div className="flex justify-center gap-4">
-                            <button className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                              Get Started Free
-                            </button>
-                            <button className="px-8 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
-                              View Pricing
-                            </button>
-                          </div>
-                        </div>
-                        
-                        {/* StackSaver Extension Popup */}
-                        <div className="absolute top-20 right-8 bg-white rounded-lg shadow-2xl border border-gray-200 p-4 w-80 animate-pulse">
-                          <div className="flex items-center gap-3 mb-3">
-                            <Logo size="sm" />
-                            <div>
-                              <h3 className="font-semibold text-gray-900">StackSaver</h3>
-                              <p className="text-xs text-gray-500">Extension Active</p>
-                            </div>
-                          </div>
-                          <div className="bg-green-50 border border-green-200 rounded-lg p-3 mb-3">
-                            <div className="flex items-center gap-2 mb-2">
-                              <span className="text-green-600">🎉</span>
-                              <span className="font-semibold text-green-800">30% OFF</span>
-                            </div>
-                            <p className="text-sm text-green-700 mb-3">
-                              Writesonic Pro Annual Plan
-                            </p>
-                            <button className="w-full bg-green-600 text-white py-2 rounded-md text-sm font-medium hover:bg-green-700 transition-colors">
-                              Activate Deal
-                            </button>
-                          </div>
-                          <div className="text-xs text-gray-500 text-center">
-                            Verified discount • No tracking
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+    <section id="demo" className="py-20 px-6 bg-white" ref={demoSectionRef}>
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+          See It In Action
+        </h2>
+        <div className="overflow-hidden shadow-2xl rounded-xl">
+          <div style={{ position: 'relative', paddingBottom: '62.5%', height: 0 }}>
+            {!loomVisible ? (
+              <div 
+                style={{ 
+                  position: 'absolute', 
+                  top: 0, 
+                  left: 0, 
+                  width: '100%', 
+                  height: '100%', 
+                  background: '#fff', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center', 
+                  cursor: 'pointer' 
+                }}
+                onClick={handlePlayClick}
+              >
+                <img
+                  src="https://cdn.loom.com/sessions/thumbnails/30e5498ccb4c42daa6e1cd1a62ec53d6.jpg"
+                  alt="Loom video thumbnail"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 8 }}
+                />
+                <div style={{ 
+                  position: 'absolute', 
+                  top: '50%', 
+                  left: '50%', 
+                  transform: 'translate(-50%, -50%)', 
+                  background: 'rgba(0,0,0,0.5)', 
+                  borderRadius: '50%', 
+                  padding: 16 
+                }}>
+                  <Play color="#fff" size={48} />
                 </div>
               </div>
-            </div>
+            ) : (
+              <iframe
+                key={loomKey}
+                src="https://www.loom.com/embed/30e5498ccb4c42daa6e1cd1a62ec53d6?sid=950af38b-5ca4-4a5c-84b2-7a9a6093997b&hideEmbedTopBar=true&autoplay=1&t=0s&muted=false"
+                frameBorder="0"
+                allowFullScreen
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              ></iframe>
+            )}
           </div>
-          
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-gray-600 leading-relaxed">
-              When you land on Writesonic, Jasper, or Grammarly, the extension instantly shows verified discounts.
-            </p>
-          </div>
+        </div>
+        
+        <div className="max-w-3xl mx-auto mt-8">
+          <p className="text-lg text-gray-600 leading-relaxed text-center">
+            When you land on Writesonic, Jasper, or Grammarly, the extension instantly shows verified discounts.
+          </p>
         </div>
       </div>
     </section>
