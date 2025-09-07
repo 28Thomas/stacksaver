@@ -128,11 +128,10 @@ export default function HeroSection() {
                 </div>
                 
                 {/* StackSaver Extension Popup - Top Right */}
-                <div className="absolute top-4 right-4 bg-white rounded-lg shadow-xl border border-gray-200 p-4 w-72 animate-slow-pulse">
+                <div className="absolute top-4 right-4 bg-white rounded-lg shadow-xl border border-gray-200 p-4 w-80 animate-slow-pulse">
                   <div className="flex items-center gap-3 mb-3">
-                    <Logo size="sm" />
+                    <Logo size="sm" showText={true} />
                     <div>
-                      <h3 className="font-semibold text-gray-900">StackSaver</h3>
                       <p className="text-xs text-gray-500">Extension Active</p>
                     </div>
                   </div>

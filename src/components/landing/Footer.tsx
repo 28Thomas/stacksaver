@@ -11,7 +11,13 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-6">
               <Logo size="lg" />
               <div>
-                <h3 className="text-xl font-bold text-gray-900">StackSaver</h3>
+                <h3 className="text-xl font-bold text-gray-900">
+                  <span className="text-gray-900">Stack</span>
+                  <span className="text-green-600 relative">
+                    Saver
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-600 rounded-full"></span>
+                  </span>
+                </h3>
                 <p className="text-sm text-green-600">Save on every tool</p>
               </div>
             </div>
