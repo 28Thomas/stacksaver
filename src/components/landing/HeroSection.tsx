@@ -34,13 +34,13 @@ export default function HeroSection() {
                 <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1 group-hover:bg-green-200 group-hover:scale-110 transition-all duration-200">
                   <CheckCircle className="w-4 h-4 text-green-600" />
                 </div>
-                <p className="text-lg text-gray-700 group-hover:text-gray-900 transition-colors duration-200">Get cashback on AI tools you're already using.</p>
+                <p className="text-lg text-gray-700 group-hover:text-gray-900 transition-colors duration-200">Get cashback on new signups through our tracked links.</p>
               </div>
               <div className="flex items-start gap-4 group cursor-pointer">
                 <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1 group-hover:bg-green-200 group-hover:scale-110 transition-all duration-200">
                   <Zap className="w-4 h-4 text-green-600" />
                 </div>
-                <p className="text-lg text-gray-700 group-hover:text-gray-900 transition-colors duration-200">See cashback badges on supported sites instantly.</p>
+                <p className="text-lg text-gray-700 group-hover:text-gray-900 transition-colors duration-200">Auto popup shows cashback opportunities instantly.</p>
               </div>
               <div className="flex items-start gap-4 group cursor-pointer">
                 <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1 group-hover:bg-green-200 group-hover:scale-110 transition-all duration-200">
