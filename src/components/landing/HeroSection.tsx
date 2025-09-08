@@ -20,12 +20,12 @@ export default function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Never overpay for{' '}
-                <span className="text-green-600">AI marketing tools</span>{' '}
-                again.
+                Earn{' '}
+                <span className="text-green-600">cashback</span>{' '}
+                on every AI SaaS signup.
               </h1>
               <h2 className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light">
-                A tiny Chrome extension that shows real discounts the moment you visit an AI SaaS site.
+                A Chrome extension that shows cashback opportunities when you visit AI SaaS sites. Sign up normally, get paid back.
               </h2>
             </div>
             
@@ -34,19 +34,19 @@ export default function HeroSection() {
                 <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1 group-hover:bg-green-200 group-hover:scale-110 transition-all duration-200">
                   <CheckCircle className="w-4 h-4 text-green-600" />
                 </div>
-                <p className="text-lg text-gray-700 group-hover:text-gray-900 transition-colors duration-200">Save money while testing AI tools.</p>
+                <p className="text-lg text-gray-700 group-hover:text-gray-900 transition-colors duration-200">Get cashback on AI tools you're already using.</p>
               </div>
               <div className="flex items-start gap-4 group cursor-pointer">
                 <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1 group-hover:bg-green-200 group-hover:scale-110 transition-all duration-200">
                   <Zap className="w-4 h-4 text-green-600" />
                 </div>
-                <p className="text-lg text-gray-700 group-hover:text-gray-900 transition-colors duration-200">One click to activate verified deals.</p>
+                <p className="text-lg text-gray-700 group-hover:text-gray-900 transition-colors duration-200">See cashback badges on supported sites instantly.</p>
               </div>
               <div className="flex items-start gap-4 group cursor-pointer">
                 <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1 group-hover:bg-green-200 group-hover:scale-110 transition-all duration-200">
                   <Shield className="w-4 h-4 text-green-600" />
                 </div>
-                <p className="text-lg text-gray-700 group-hover:text-gray-900 transition-colors duration-200">No shady redirects. 100% transparent.</p>
+                <p className="text-lg text-gray-700 group-hover:text-gray-900 transition-colors duration-200">Withdraw confirmed cashback via PayPal or Stripe.</p>
               </div>
             </div>
             
@@ -59,7 +59,7 @@ export default function HeroSection() {
                 Join Early Access
               </Button>
               <p className="text-sm text-gray-500 leading-relaxed">
-                We may earn commissions if you activate offers. No tracking, ever.
+                We earn affiliate commissions and share a percentage back with you as cashback.
               </p>
             </div>
           </div>
@@ -137,18 +137,18 @@ export default function HeroSection() {
                   </div>
                   <div className="bg-green-50 border border-green-200 rounded-lg p-3 mb-3">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="text-green-600">🎉</span>
-                      <span className="font-semibold text-green-800">30% OFF</span>
+                      <span className="text-green-600">💰</span>
+                      <span className="font-semibold text-green-800">$12 Cashback</span>
                     </div>
                     <p className="text-sm text-green-700 mb-3">
-                      Writesonic Pro Plan
+                      Sign up through our link
                     </p>
                     <button className="w-full bg-green-600 text-white py-2 rounded-md text-sm font-medium hover:bg-green-700 transition-colors">
-                      Activate Deal
+                      Sign Up & Earn
                     </button>
                   </div>
                   <div className="text-xs text-gray-500 text-center">
-                    Verified discount • No tracking
+                    Cashback confirmed in 30-90 days
                   </div>
                 </div>
               </div>

@@ -7,7 +7,7 @@ export default function SocialProofSection() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center space-y-12">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
-            Built for marketers, by a marketer.
+            Built for SaaS users, by a SaaS founder.
           </h2>
           
           <div className="bg-gradient-to-br from-green-50 to-teal-100 rounded-2xl p-8 shadow-2xl">
@@ -40,7 +40,7 @@ export default function SocialProofSection() {
                     I&apos;m <strong>Thomas</strong>, an automation founder from the Netherlands. I built this tool after wasting too much time hunting coupons while testing AI SaaS.
                   </p>
                   <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
-                    My promise: <strong className="text-green-600">transparent deals only, no tricks.</strong>
+                    My promise: <strong className="text-green-600">share the commission with you as cashback, transparently.</strong>
                   </p>
                   
                   <div className="flex flex-wrap gap-4 pt-4">
@@ -51,7 +51,7 @@ export default function SocialProofSection() {
                       <p className="text-sm font-medium text-green-700">🚀 Automation Founder</p>
                     </div>
                     <div className="bg-green-50 px-4 py-2 rounded-full shadow-md border border-green-100">
-                      <p className="text-sm font-medium text-green-700">💡 AI Marketing Expert</p>
+                      <p className="text-sm font-medium text-green-700">💡 AI Vibe Coding</p>
                     </div>
                   </div>
                 </div>

@@ -88,7 +88,7 @@ export default function DemoSection() {
         
         <div className="max-w-3xl mx-auto mt-8">
           <p className="text-lg text-gray-600 leading-relaxed text-center">
-            When you land on Writesonic, Jasper, or Grammarly, the extension instantly shows verified discounts.
+            When you visit Writesonic, Jasper, or Grammarly, the extension shows cashback opportunities for signups through our tracked links.
           </p>
         </div>
       </div>

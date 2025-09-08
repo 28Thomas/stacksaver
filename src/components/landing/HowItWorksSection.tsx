@@ -9,13 +9,13 @@ const steps = [
   },
   {
     icon: Globe2,
-    title: "Visit an AI marketing tool website",
-    description: "Browse any of the 20+ supported AI marketing SaaS tools as you normally would."
+    title: "Browse AI SaaS tools normally",
+    description: "Visit any supported AI SaaS website. Our extension shows cashback opportunities for signups through our tracked links."
   },
   {
     icon: Sparkles,
-    title: "See discount → Activate Deal",
-    description: "Our extension shows available discounts instantly. Click to activate and save on your subscription."
+    title: "Sign up → Earn cashback",
+    description: "Sign up through our tracked link and earn cashback. Withdraw confirmed earnings via PayPal or Stripe."
   }
 ];
 

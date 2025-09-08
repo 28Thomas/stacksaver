@@ -54,9 +54,10 @@ export default function TermsOfService() {
                     StackSaver is a Chrome extension that:
                   </p>
                   <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                    <li>Identifies and displays verified discounts for AI SaaS tools</li>
-                    <li>Shows real-time savings opportunities when visiting supported websites</li>
-                    <li>Provides transparent affiliate links to help users save money</li>
+                    <li>Shows cashback opportunities when visiting supported AI SaaS websites</li>
+                    <li>Provides tracked affiliate links that earn commissions for both StackSaver and users</li>
+                    <li>Shares 70-80% of affiliate commissions back with users as cashback</li>
+                    <li>Processes cashback payments via PayPal or Stripe once confirmed</li>
                     <li>Collects minimal usage data to improve service quality</li>
                   </ul>
                 </section>
@@ -83,10 +84,25 @@ export default function TermsOfService() {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Affiliate Disclosure</h2>
-                  <p className="text-gray-700 leading-relaxed">
-                    StackSaver may earn commissions when users activate offers through our extension. We are committed to transparency and only promote verified, legitimate discounts. Our affiliate relationships do not affect the quality or accuracy of the deals we present.
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Affiliate Disclosure and Third-Party Relationships</h2>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    StackSaver operates as an independent affiliate marketing service. Important disclosures:
                   </p>
+                  <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+                    <li>We earn affiliate commissions when users sign up through our tracked links</li>
+                    <li>We share 70-80% of these commissions back with users as cashback</li>
+                    <li>Cashback amounts vary by SaaS provider, typically $5-$50 per signup</li>
+                    <li>Cashback is marked as "pending" immediately and "confirmed" after 30-90 days</li>
+                    <li>Users can withdraw confirmed cashback via PayPal or Stripe once reaching $10 minimum</li>
+                  </ul>
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <p className="text-yellow-800 font-medium mb-2">Important Legal Disclaimer:</p>
+                    <p className="text-yellow-700 text-sm leading-relaxed">
+                      StackSaver is <strong>not affiliated with, endorsed by, or connected to</strong> any of the SaaS companies we promote. 
+                      We are independent affiliates who earn commissions when users sign up through our tracked links. 
+                      We do not represent these companies or their products. All product names, logos, and brands are property of their respective owners.
+                    </p>
+                  </div>
                 </section>
 
                 <section>

@@ -4,6 +4,7 @@ import LogoCarousel from './LogoCarousel';
 import HowItWorksSection from './HowItWorksSection';
 import DemoSection from './DemoSection';
 import SocialProofSection from './SocialProofSection';
+import FAQSection from './FAQSection';
 import EarlyAccessForm from './EarlyAccessForm';
 import Footer from './Footer';
 
@@ -15,6 +16,7 @@ export default function Landing() {
       <HowItWorksSection />
       <DemoSection />
       <SocialProofSection />
+      <FAQSection />
       <EarlyAccessForm />
       <Footer />
     </div>

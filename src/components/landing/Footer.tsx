@@ -24,12 +24,13 @@ export default function Footer() {
             <p className="text-gray-600 leading-relaxed mb-6">
               The transparent Chrome extension that finds verified discounts for AI marketing tools. No tricks, no hidden fees.
             </p>
-            <p className="text-gray-600 text-sm mb-4">thomas@stacksaver.io</p>
-            <div className="flex gap-4">
-              <div className="bg-green-100 px-3 py-1 rounded-full">
-                <p className="text-sm font-medium text-green-700">🇳🇱 Made in Netherlands</p>
-              </div>
-            </div>
+            <h4 className="text-lg font-semibold text-gray-900 mb-2">Contact</h4>
+            <a 
+              href="mailto:thomas@stacksaver.io" 
+              className="text-gray-600 text-sm mb-4 hover:text-green-600 transition-colors duration-200"
+            >
+              thomas@stacksaver.io
+            </a>
           </div>
           
           <div className="lg:col-span-1">
@@ -53,7 +54,16 @@ export default function Footer() {
         <div className="border-t border-gray-200 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600 text-sm">© 2025 StackSaver. All rights reserved.</p>
-            <p className="text-gray-500 text-sm">Built with 💚 in the Netherlands</p>
+            <div className="bg-green-100 px-3 py-1 rounded-full">
+              <p className="text-sm font-medium text-green-700">🇳🇱 Made in Netherlands</p>
+            </div>
+          </div>
+          
+          <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+            <p className="text-xs text-gray-500 leading-relaxed">
+              <strong>Disclaimer:</strong> StackSaver operates as an independent affiliate service. 
+              See our <Link href="/terms" className="text-green-600 hover:text-green-700 underline">Terms of Service</Link> for complete details about our affiliate relationships and cashback program.
+            </p>
           </div>
         </div>
       </div>
