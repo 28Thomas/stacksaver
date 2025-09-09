@@ -51,40 +51,40 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-green-50 to-white">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-b from-green-50 to-white">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
+        <div className="text-center space-y-3 sm:space-y-4 mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
             Everything you need to know about StackSaver
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+              className="bg-white rounded-lg sm:rounded-xl shadow-sm border border-gray-100 overflow-hidden"
             >
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
               >
-                <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 pr-3 sm:pr-4">
                   {faq.question}
                 </h3>
                 {openItem === index ? (
-                  <ChevronUp className="w-5 h-5 text-gray-500 flex-shrink-0" />
+                  <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 flex-shrink-0" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0" />
+                  <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 flex-shrink-0" />
                 )}
               </button>
               
               {openItem === index && (
-                <div className="px-6 pb-4">
-                  <p className="text-gray-600 leading-relaxed">
+                <div className="px-4 sm:px-6 pb-3 sm:pb-4">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

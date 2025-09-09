@@ -34,12 +34,12 @@ export default function DemoSection() {
   }, []);
 
   return (
-    <section id="demo" className="py-20 px-6 bg-white" ref={demoSectionRef}>
+    <section id="demo" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-white" ref={demoSectionRef}>
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-800">
           See It In Action
         </h2>
-        <div className="overflow-hidden shadow-2xl rounded-xl">
+        <div className="overflow-hidden shadow-2xl rounded-lg sm:rounded-xl">
           <div style={{ position: 'relative', paddingBottom: '62.5%', height: 0 }}>
             {!loomVisible ? (
               <div 
@@ -86,8 +86,8 @@ export default function DemoSection() {
           </div>
         </div>
         
-        <div className="max-w-3xl mx-auto mt-8">
-          <p className="text-lg text-gray-600 leading-relaxed text-center">
+        <div className="max-w-3xl mx-auto mt-6 sm:mt-8">
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed text-center">
             When you visit Writesonic, Jasper, or Grammarly, the extension shows cashback opportunities for signups through our tracked links.
           </p>
         </div>
